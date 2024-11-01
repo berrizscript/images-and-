@@ -12,8 +12,8 @@ customCursor.style.height = "32px";
 customCursor.src = defaultCursorURL;
 document.body.appendChild(customCursor);
 
-// Hide the default cursor
-document.body.style.cursor = "none";
+// Hide the normal cursor
+document.body.style.cursor = "none"; // This hides the default cursor
 
 // Update cursor position
 document.addEventListener("mousemove", (event) => {
