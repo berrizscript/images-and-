@@ -23,7 +23,7 @@ document.addEventListener("mousemove", (event) => {
 
 // Change cursor image on hover over clickable elements
 document.addEventListener("mouseover", (event) => {
-  if (event.target.tagName === "A" || event.target.tagName === "BUTTON" || event.target.hasAttribute("onclick")) {
+  if (event.target.matches("a, button") || event.target.hasAttribute("onclick")) {
     customCursor.src = pointerCursorURL;
   } else {
     customCursor.src = defaultCursorURL;
@@ -32,7 +32,7 @@ document.addEventListener("mouseover", (event) => {
 
 // Revert to default cursor image on mouseout
 document.addEventListener("mouseout", (event) => {
-  if (event.target.tagName === "A" || event.target.tagName === "BUTTON" || event.target.hasAttribute("onclick")) {
+  if (event.target.matches("a, button") || event.target.hasAttribute("onclick")) {
     customCursor.src = defaultCursorURL;
   }
 });
